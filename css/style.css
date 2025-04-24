@@ -189,6 +189,10 @@ p {
     text-align: left !important;
 }
 
+.text-center {
+    text-align: center !important;
+}
+
 .fw-bold {
     font-weight: bold;
 }
@@ -337,3 +341,10 @@ p {
     margin: 0 auto;
 }
 /* /ChartJS */
+
+/* OOJS */
+.shape {
+    position: absolute;
+    box-sizing: border-box;
+}
+/* /OOJS */

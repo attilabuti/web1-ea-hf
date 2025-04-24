@@ -12,8 +12,8 @@ var movies = [
 // A következő ID
 var nextId = 5;
 
-// Mentes gomb
-addEventListener(document.getElementById('save'), 'click', () => {
+// Mentés gomb
+document.getElementById('save').addEventListener('click', () => {
     if (formEl.reportValidity()) {
         let movieId = document.getElementById("movie-id").value;
 
@@ -24,6 +24,10 @@ addEventListener(document.getElementById('save'), 'click', () => {
         }
     }
 });
+
+function resetId() {
+    document.getElementById("movie-id").value = "";
+}
 
 // Rendezés
 var activeSorting = '';
@@ -106,6 +110,7 @@ function create() {
 
     nextId++;
 
+    document.getElementById("movie-id").value = "";
     formEl.reset();
     drawTable();
 }
@@ -139,6 +144,7 @@ function update(id) {
         movies[movieIndex] = { ...movies[movieIndex], ...newData };
     }
 
+    document.getElementById("movie-id").value = "";
     formEl.reset();
     drawTable();
 }
@@ -153,6 +159,6 @@ function remove(id) {
     }
 }
 
-ready(() => {
+document.addEventListener('DOMContentLoaded', () => {
     drawTable();
 });
