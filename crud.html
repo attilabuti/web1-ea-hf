@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>WEB-programozás I. - Előadás Házi feladat</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>WEB-programozás I. - Előadás Házi feladat</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="crud.html" class="active">Táblázat</a></li>
+                <li><a href="html5.html">HTML5</a></li>
+                <li><a href="chartjs.html">ChartJS</a></li>
+                <li><a href="ajax.html">OOJS</a></li>
+                <li><a href="oojs.html">OOJS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <main>
+            <h2>CRUD</h2>
+
+            <div class="movie-form">
+                <form id="movie-form" onsubmit="event.preventDefault();">
+                    <input type="hidden" name="movie-id" id="movie-id" value="">
+
+                    <div>
+                        <label for="title">Film címe</label>
+                        <input type="text" name="title" id="title" required>
+                    </div>
+
+                    <div>
+                        <label for="release">Megjelenés éve</label>
+                        <input type="number" name="release" id="release" placeholder="Pl.: 2025" min="1888" max="2025" inputmode="numeric" required>
+                    </div>
+
+                    <div>
+                        <label for="genre">Műfaj</label>
+                        <select id="genre" name="genre" required>
+                            <option value="">-- Válassz műfajt --</option>
+                            <option value="Akció">Akció</option>
+                            <option value="Vígjáték">Vígjáték</option>
+                            <option value="Dráma">Dráma</option>
+                            <option value="Horror">Horror</option>
+                            <option value="Sci-fi">Sci-fi</option>
+                            <option value="Romantikus">Romantikus</option>
+                            <option value="Thriller">Thriller</option>
+                            <option value="Fantasy">Fantasy</option>
+                            <option value="Animáció">Animáció</option>
+                            <option value="Dokumentumfilm">Dokumentumfilm</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="rating">Értékelés (1-10)</label>
+                        <input type="number" name="rating" id="rating" placeholder="Pl.: 5.5" min="1" max="10" step="0.1" inputmode="numeric" required>
+                    </div>
+
+                    <div class="buttons">
+                        <input type="reset" value="Mégsem">
+                        <input type="button" value="Mentés" id="save">
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="movie-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="sorting" data-sort="title">Film címe</th>
+                            <th class="sorting" data-sort="release">Megjelenés éve</th>
+                            <th class="sorting" data-sort="genre">Műfaj</th>
+                            <th class="sorting" data-sort="rating">Értékelés</th>
+                            <th>Művelet</th>
+                        </tr>
+                    </thead>
+                    <tbody id="movie-list">
+
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <footer>Buti Attila (W31M7N)</footer>
+
+    <script src="js/helpers.js"></script>
+    <script src="js/crud.js"></script>
+</body>
+
+</html>

@@ -175,3 +175,112 @@ p {
         max-width: 100%;
     }
 }
+
+/* CRUD */
+.movie-form form {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.movie-form form label {
+    font-weight: 700;
+    display: block;
+}
+
+.movie-form form input,
+.movie-form form select {
+  box-sizing: border-box;
+  width: 100%;
+  height: 30px;
+  padding: 0 15px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.movie-form form div {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.movie-form form input[type=reset],
+.movie-form form input[type=button] {
+    width: 45%;
+    background-color: #111;
+    color: #fff;
+    cursor: pointer;
+}
+
+.movie-form form input[type=reset]:hover,
+.movie-form form input[type=button]:hover {
+    color: #fb5;
+}
+
+.movie-form form input[type=reset] {
+    float: left;
+}
+
+.movie-form form input[type=button] {
+    float: right;
+}
+
+.movie-form .buttons {
+    display: table;
+}
+
+.movie-table {
+    margin-top: 50px;
+}
+
+.movie-table table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.movie-table table th {
+    background-color: #bbb;
+    color: #000;
+    border: 0px;
+    border-collapse: collapse;
+    padding: 0 1ch 0 1ch;
+    font-weight: 700;
+    height: 30px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.movie-table table th:last-child {
+    cursor: unset;
+}
+
+.movie-table table tr:nth-child(even) {
+    background-color: #e7e7e7;
+}
+
+.movie-table table tr:nth-child(odd) {
+    background-color: #f5f5f0;
+}
+
+.movie-table table tr:hover {
+    background-color: #e1e9f2;
+}
+
+.movie-table table a {
+    text-decoration: none;
+}
+
+.movie-table table td {
+    border-collapse: collapse;
+    padding: 0.8ch 1ch 0.8ch 1ch;
+}
+
+.movie-table  table.reference,
+.movie-table  table.reference th,
+.movie-table  table.reference td {
+    border: 0px;
+    padding: 0;
+}
+
+/* /CRUD */
