@@ -8,8 +8,9 @@ function ready(fn) {
 
 function addEventListener(el, eventName, eventHandler, selector) {
     if (selector) {
-        const wrappedHandler = (e) => {
+        const wrappedHandler = e => {
             if (!e.target) return;
+
             const el = e.target.closest(selector);
             if (el) {
                 eventHandler.call(el, e);
@@ -20,7 +21,7 @@ function addEventListener(el, eventName, eventHandler, selector) {
 
         return wrappedHandler;
     } else {
-        const wrappedHandler = (e) => {
+        const wrappedHandler = e => {
             eventHandler.call(el, e);
         };
 

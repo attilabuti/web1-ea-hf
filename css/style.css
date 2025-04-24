@@ -176,6 +176,20 @@ p {
     }
 }
 
+/* Helpers */
+.mt-50px {
+    margin-top: 50px;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.fw-bold {
+    font-weight: bold;
+}
+/* /Helpers */
+
 /* CRUD */
 .movie-form form {
     max-width: 600px;
@@ -282,5 +296,31 @@ p {
     border: 0px;
     padding: 0;
 }
-
 /* /CRUD */
+
+/* HTML5 */
+#drop-zone {
+    width: 260px;
+    height: 65px;
+    border: 2px dashed #ccc;
+    text-align: center;
+}
+
+#nje-logo {
+    cursor: grab;
+}
+
+#nje-logo:active {
+    cursor: grabbing;
+}
+
+.server-sent-events {
+    height: 100px;
+}
+
+.server-sent-events p {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+/* /HTML5 */

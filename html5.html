@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>WEB-programozás I. - Előadás Házi feladat</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>WEB-programozás I. - Előadás Házi feladat</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="crud.html">Táblázat</a></li>
+                <li><a href="html5.html" class="active">HTML5</a></li>
+                <li><a href="chartjs.html">ChartJS</a></li>
+                <li><a href="ajax.html">OOJS</a></li>
+                <li><a href="oojs.html">OOJS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <main>
+            <h2>HTML5</h2>
+
+            <div>
+                <h3 class="text-left">Web Storage - LocalStorage</h3>
+
+                <input type="text" id="data" placeholder="Írj valamit...">
+
+                <button onclick="wsSave()">Mentés</button>
+                <button onclick="wsLoad()">Betöltés</button>
+                <button onclick="wsRemove()">Törlés</button>
+                <p id="output"></p>
+            </div>
+
+            <div class="mt-50px">
+                <h2 class="text-left">Web Worker</h2>
+                <p class="fw-bold">Állapot: <span id="ww-status">Leállítva</span></p>
+
+                <button onclick="startWorker()">Web Worker indítása</button>
+                <button onclick="stopWorker()">Web Worker leállítása</button>
+                <button onclick="sendMessage()">Üzenet küldése</button>
+
+                <p id="workerOutput"></p>
+            </div>
+
+            <div class="mt-50px server-sent-events">
+                <h2 class="text-left">Server-Sent Events</h2>
+
+                <div id="messages"></div>
+            </div>
+
+            <div class="mt-50px">
+                <h2 class="text-left">Geolocation API</h2>
+
+                <button onclick="getLocation()">Helymeghatározás</button>
+
+                <p id="location"></p>
+            </div>
+
+            <div class="mt-50px">
+                <h2 class="text-left">Drag and Drop API</h2>
+
+                <p>Húzd a logót a téglalapba</p>
+
+                <div id="drop-zone" ondrop="drop(event)" ondragover="dragOver(event)"></div>
+                <img id="nje-logo" src="img/nje.jpg" alt="NJE" draggable="true" ondragstart="dragStart(event)">
+            </div>
+
+            <div class="mt-50px">
+                <h2 class="text-left">Canvas</h2>
+
+                <canvas id="canvas" width="200" height="100" style="border: 1px solid #000;"></canvas>
+                <br>
+                <button onclick="drawOnCanvas()">Rajzolás a Canvas-re</button>
+            </div>
+
+            <div class="mt-50px">
+                <h2 class="text-left">SVG</h2>
+
+                <svg height="150" width="200">
+                    <defs>
+                        <radialGradient id="grad1" cx="25%" cy="25%" spreadMethod="reflect">
+                            <stop offset="0%" stop-color="white" />
+                            <stop offset="100%" stop-color="blue" />
+                        </radialGradient>
+                    </defs>
+                    <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+                    Ez a böngésző nem támogatja az inline SVG-t.
+                </svg>
+            </div>
+        </main>
+    </div>
+
+    <footer>Buti Attila (W31M7N)</footer>
+
+    <script src="js/helpers.js"></script>
+    <script src="js/html5.js"></script>
+</body>
+</html>
