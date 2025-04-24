@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>WEB-programozás I. - Előadás Házi feladat</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>WEB-programozás I. - Előadás Házi feladat</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="crud.html">Táblázat</a></li>
+                <li><a href="html5.html">HTML5</a></li>
+                <li><a href="chartjs.html" class="active">ChartJS</a></li>
+                <li><a href="ajax.html">OOJS</a></li>
+                <li><a href="oojs.html">OOJS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <main>
+            <h2>ChartJS</h2>
+
+            <div class="data-table mt-25px">
+                <table class="chart-table">
+                    <thead>
+                        <tr>
+                            <th>Január</th>
+                            <th>Február</th>
+                            <th>Március</th>
+                            <th>Április</th>
+                            <th>Május</th>
+                            <th>Művelet</th>
+                        </tr>
+                    </thead>
+                    <tbody id="data-list"></tbody>
+                </table>
+            </div>
+
+            <canvas id="lineChart" width="600" height="400"></canvas>
+        </main>
+    </div>
+
+    <footer>Buti Attila (W31M7N)</footer>
+
+    <script src="js/lib/chart.js"></script>
+    <script src="js/chart.js"></script>
+</body>
+</html>
