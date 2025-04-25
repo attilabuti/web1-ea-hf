@@ -81,7 +81,7 @@ function drawTable() {
 
     // Elemek megjelenítése
     movies.forEach(movie => {
-        const tr = document.createElement('tr');
+        var tr = document.createElement('tr');
 
         tr.innerHTML = `
             <td>${movie.title}</td>

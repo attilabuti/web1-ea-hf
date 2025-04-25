@@ -177,6 +177,10 @@ p {
 }
 
 /* Helpers */
+.mt-15px {
+    margin-top: 15px;
+}
+
 .mt-25px {
     margin-top: 25px;
 }
@@ -333,6 +337,10 @@ p {
     margin-bottom: 20px
 }
 
+.data-table .chart-table th {
+    cursor: unset !important;
+}
+
 #lineChart {
     max-width: 600px;
     width: auto;
@@ -348,3 +356,62 @@ p {
     box-sizing: border-box;
 }
 /* /OOJS */
+
+/* Ajax */
+.ajax .data-table {
+    max-width: 500px;
+    margin-top: 0px;
+}
+
+.ajax .data-table th {
+    cursor: unset !important;
+}
+
+.ajax .stat thead td,
+.ajax .stat tbody td:first-child {
+    font-weight: 700;
+}
+
+.ajax div h2 {
+    margin-bottom: 10px;
+    margin-top: 40px;
+}
+
+.ajax label {
+    font-weight: 700;
+    margin-bottom: 2px;
+    display: block;
+}
+
+.ajax label span.msg {
+    color: red;
+    font-weight: 700;
+}
+
+.ajax input[type=text] {
+    max-width: 300px;
+    width: 100%;
+    height: 25px;
+    display: block;
+}
+
+.ajax input[type=button] {
+    width: 100px;
+    margin-top: 8px;
+    height: 30px;
+}
+
+.ajax .result-msg {
+    height: 28px;
+}
+
+.ajax .result-msg.success {
+    color: green;
+    font-weight: 700;
+}
+
+.ajax .result-msg.error {
+    color: red;
+    font-weight: 700;
+}
+/* Ajax */

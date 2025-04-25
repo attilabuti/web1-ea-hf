@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>WEB-programozás I. - Előadás Házi feladat</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>WEB-programozás I. - Előadás Házi feladat</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="crud.html">Táblázat</a></li>
+                <li><a href="html5.html">HTML5</a></li>
+                <li><a href="chartjs.html">ChartJS</a></li>
+                <li><a href="ajax.html" class="active">Ajax</a></li>
+                <li><a href="oojs.html">OOJS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <main class="ajax">
+            <h2>Ajax</h2>
+
+            <div>
+                <h2 class="text-left">Read</h2>
+
+                <div class="data-table mt-25px">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Height</th>
+                                <th>Weight</th>
+                            </tr>
+                        </thead>
+                        <tbody id="data-list"></tbody>
+                    </table>
+                </div>
+
+                <div>
+                    <table class="stat">
+                        <thead>
+                            <tr><td colspan="2">Height value</td></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Sum:</td>
+                                <td class="stat-sum"></td>
+                            </tr>
+                            <tr>
+                                <td>Average:</td>
+                                <td class="stat-avg"></td>
+                            </tr>
+                            <tr>
+                                <td>Maximum:</td>
+                                <td class="stat-max"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <input type="button" value=" Reload data" id="reload-btn">
+            </div>
+
+            <div>
+                <h2 class="text-left">Create</h2>
+
+                <div class="result-msg create-msg"></div>
+
+                <div>
+                    <label for="c-name">Name (required, max 30): <span class="msg"></span></label>
+                    <input type="text" value="" id="c-name">
+                </div>
+
+                <div class="mt-15px">
+                    <label for="c-height">Height (required, max 30): <span class="msg"></span></label>
+                    <input type="text" value="" id="c-height">
+                </div>
+
+                <div class="mt-15px">
+                    <label for="c-weight">Weight (required, max 30): <span class="msg"></span></label>
+                    <input type="text" value="" id="c-weight">
+                </div>
+
+                <input type="button" value="Reset" id="create-reset-btn">
+                <input type="button" value="Create" id="create-btn">
+            </div>
+
+            <div>
+                <h2 class="text-left">Update</h2>
+
+                <div class="result-msg update-msg"></div>
+
+                <div>
+                    <label for="load-id">ID (required): <span class="msg"></span></label>
+                    <input type="text" value="" id="load-id">
+
+                    <input type="button" value="Reset" id="load-reset-btn">
+                    <input type="button" value="getDataForId" id="load-btn">
+                </div>
+
+                <div class="mt-25px">
+                    <label for="u-name">Name (required, max 30): <span class="msg"></span></label>
+                    <input type="text" value="" id="u-name" disabled>
+                </div>
+
+                <div class="mt-15px">
+                    <label for="u-height">Height (required, max 30): <span class="msg"></span></label>
+                    <input type="text" value="" id="u-height" disabled>
+                </div>
+
+                <div class="mt-15px">
+                    <label for="u-weight">Weight (required, max 30): <span class="msg"></span></label>
+                    <input type="text" value="" id="u-weight" disabled>
+                </div>
+
+                <input type="button" value="Reset" id="update-reset-btn" disabled>
+                <input type="button" value="Update" id="update-btn" disabled>
+            </div>
+
+            <div>
+                <h2 class="text-left">Delete</h2>
+
+                <div class="result-msg delete-msg"></div>
+
+                <label for="delete-id">ID (required): <span class="msg"></span></label>
+                <input type="text" value="" id="delete-id">
+
+                <input type="button" value="Reset" id="delete-reset-btn">
+                <input type="button" value="Delete" id="delete-btn">
+            </div>
+        </main>
+    </div>
+
+    <footer>Buti Attila (W31M7N)</footer>
+
+    <script src="js/ajax.js"></script>
+</body>
+</html>

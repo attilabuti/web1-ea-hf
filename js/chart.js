@@ -20,7 +20,7 @@ const dataSetExpense = [
 
 function drawTable() {
     for (let i = 0; i < dataSetIncome.length; i++) {
-        const tr = document.createElement('tr');
+        var tr = document.createElement('tr');
 
         let dataText = '';
         for (let y = 0; y < dataSetIncome[i].length; y++) {
