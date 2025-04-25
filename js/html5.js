@@ -82,15 +82,21 @@ eventSource.onmessage = e => {
 };
 
 eventSource.onerror = () => {
-    console.error('Hiba történt a kapcsolat során.');
+    let errorMsg = document.createElement('p');
+    errorMsg.style.color = 'red';
+    errorMsg.style.fontWeight = 700;
+    errorMsg.textContent = `Hiba történt a kapcsolat során.`;
+    messagesEl.appendChild(errorMsg);
 };
 
 // Geolocation API
 function getLocation() {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
+        navigator.geolocation.getCurrentPosition(showPosition, getPositionError);
     } else {
-        alert('A böngésző nem támogatja a geolokációt.');
+        document.getElementById('location').style.color = 'red';
+        document.getElementById('location').style.fontWeight = 700;
+        document.getElementById('location').textContent = `A böngésző nem támogatja a geolokációt.`;
     }
 }
 
@@ -98,6 +104,12 @@ function showPosition(position) {
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
     document.getElementById('location').textContent = `Latitude: ${lat}, Longitude: ${lon}`;
+}
+
+function getPositionError(err) {
+    document.getElementById('location').style.color = 'red';
+    document.getElementById('location').style.fontWeight = 700;
+    document.getElementById('location').textContent = err.message;
 }
 
 // Drag and Drop API

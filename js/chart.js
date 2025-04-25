@@ -21,18 +21,16 @@ const dataSetExpense = [
 function drawTable() {
     for (let i = 0; i < dataSetIncome.length; i++) {
         var tr = document.createElement('tr');
+        tr.addEventListener('click', () => {
+            visualise(i);
+        });
 
         let dataText = '';
         for (let y = 0; y < dataSetIncome[i].length; y++) {
             dataText += `<td>${dataSetIncome[i][y]} / ${dataSetExpense[i][y]}</td>`;
         }
 
-        tr.innerHTML = `
-            ${dataText}
-            <td>
-                <a href="#" onclick="visualise(${i})">Diagram</a>
-            </td>
-        `;
+        tr.innerHTML = dataText;
 
         dataList.appendChild(tr);
     }

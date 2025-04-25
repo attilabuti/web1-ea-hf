@@ -353,6 +353,10 @@ p {
     margin-bottom: 20px
 }
 
+.chart-table tbody tr {
+    cursor: pointer;
+}
+
 .data-table .chart-table th {
     cursor: unset !important;
 }
