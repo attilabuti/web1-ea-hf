@@ -1,0 +1,68 @@
+.todo {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.todo .todo-form {
+    height: 35px;
+}
+
+.todo input {
+    width: calc(100% - 120px);
+    height: 25px;
+    display: block;
+    float: left;
+}
+
+.todo .save {
+    display: block;
+    float: right;
+    max-width: 100px;
+    height: 31px;
+    margin-top: -1px;
+}
+
+.todo h3 {
+    display: block;
+    text-align: left;
+    margin-top: 20px;
+    font-size: 22px;
+}
+
+.todo ul {
+    display: block;
+    padding-left: 30px;
+    list-style: circle;
+}
+
+.todo li {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.todo .buttons {
+    font-weight: normal !important;
+    display: inline;
+    padding-left: 20px;
+}
+
+.todo li button {
+    display: inline;
+    background-color: unset;
+    border: 0px;
+    width: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.todo li button:first-child {
+    padding-right: 15px;
+}
+
+.todo .todo-done:hover {
+    color: green;
+}
+
+.todo .todo-delete:hover {
+    color: red;
+}

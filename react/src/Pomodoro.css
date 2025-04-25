@@ -1,0 +1,22 @@
+.pomodoro-timer {
+    max-width: 250px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pomodoro-timer h1 {
+    font-size: 50px;
+}
+
+.pomodoro-timer .timer-finished-message {
+    color: #ff3636;
+    font-weight: 700;
+    font-size: 25px;
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
