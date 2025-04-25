@@ -12,6 +12,8 @@ var movies = [
 // A következő ID
 var nextId = 5;
 
+var searchTerm = '';
+
 // Mentés gomb
 document.getElementById('save').addEventListener('click', () => {
     if (formEl.reportValidity()) {
@@ -79,8 +81,19 @@ function drawTable() {
     // Elemek rendezése
     sortingElements();
 
+    // Keresés / szűrés alkalmazása
+    let moviesToDraw = movies.filter(movie => {
+        return Object.entries(movie).some(([key, value]) => {
+            if (key === 'id') {
+                return false;
+            }
+
+            return String(value).toLowerCase().includes(searchTerm);
+        });
+    });
+
     // Elemek megjelenítése
-    movies.forEach(movie => {
+    moviesToDraw.forEach(movie => {
         var tr = document.createElement('tr');
 
         tr.innerHTML = `
@@ -161,4 +174,9 @@ function remove(id) {
 
 document.addEventListener('DOMContentLoaded', () => {
     drawTable();
+
+    document.getElementById('search').addEventListener('input', e => {
+        searchTerm = e.target.value.toLowerCase();
+        drawTable();
+    });
 });
